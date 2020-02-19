@@ -60,13 +60,13 @@ import javax.swing.JTextField;
 		
 		
 
-		 newPanel = new JPanel(null);
-		 newPanel.setBorder(BorderFactory.createTitledBorder("Configuration"));
-		 newPanel.setBounds(30  ,select_labl.getY()+40  , 337+browse_btn.getWidth() , 180);
+             newPanel = new JPanel(null);
+	     newPanel.setBorder(BorderFactory.createTitledBorder("Configuration"));
+	     newPanel.setBounds(30  ,select_labl.getY()+40  , 337+browse_btn.getWidth() , 180);
 		 
 		 
-		 JLabel label1 = new JLabel("Server Host : ");
-		 label1.setFont(new Font("" , Font.PLAIN , 15));
+	     JLabel label1 = new JLabel("Server Host : ");
+	     label1.setFont(new Font("" , Font.PLAIN , 15));
 	     JLabel label2 = new JLabel("Server Port : ");
 	     label2.setFont(new Font("" , Font.PLAIN , 15));
 	     JLabel label3 = new JLabel("Username :    ");
@@ -87,10 +87,10 @@ import javax.swing.JTextField;
 	     
 	     // if you want to set username & password
 	     text_username = new JTextField();
-		 text_username.setBounds(label3.getWidth()+12 , label3.getY()+2 , 140 , 21);
+	     text_username.setBounds(label3.getWidth()+12 , label3.getY()+2 , 140 , 21);
 		 		 
-		 text_password= new  JPasswordField();
-		 text_password.setBounds(label4.getWidth()+13 , label4.getY()+2 , 140 , 21);
+	     text_password= new  JPasswordField();
+	     text_password.setBounds(label4.getWidth()+13 , label4.getY()+2 , 140 , 21);
 	     
 	     newPanel.add(label1); newPanel.add(label2); newPanel.add(label3); newPanel.add(label4);
 	     newPanel.add(host_field); newPanel.add(port_field); 	     
@@ -99,28 +99,28 @@ import javax.swing.JTextField;
 	     //newPanel.add(text_username);
 	     //newPanel.add(text_password);
 	     				
-		 upload_btn = new JButton("Upload");
-		 upload_btn.setBounds(path_file.getX()+(path_file.getWidth()/3), path_file.getY()+200+35 ,95, 30);
-		 upload_btn.setFocusPainted(false);
-		 upload_btn.setFont(new Font("Consolas" , Font.PLAIN ,12));
-		 upload_btn.setForeground(Color.BLACK);
+	     upload_btn = new JButton("Upload");
+	     upload_btn.setBounds(path_file.getX()+(path_file.getWidth()/3), path_file.getY()+200+35 ,95, 30);
+	     upload_btn.setFocusPainted(false);
+	     upload_btn.setFont(new Font("Consolas" , Font.PLAIN ,12));
+	     upload_btn.setForeground(Color.BLACK);
 		
          
 	     // add components to Frame
-		 add(select_labl);
-		 add(path_file);
-		 add(browse_btn);
-		 add(upload_btn);		
-		 add(newPanel);		
+	     add(select_labl);
+	     add(path_file);
+	     add(browse_btn);
+	     add(upload_btn);		
+	     add(newPanel);		
 		 // set frame properties
-		 setTitle("Client Administrator");
-		 setSize(540 , 380);
-		 setLayout(null);
-		 setDefaultCloseOperation(EXIT_ON_CLOSE);
-		 setDefaultLookAndFeelDecorated(true);
-         setLocationRelativeTo(null);
-         setResizable(false);
-		 setVisible(true);		
+	     setTitle("Client Administrator");
+	     setSize(540 , 380);
+	     setLayout(null);
+	     setDefaultCloseOperation(EXIT_ON_CLOSE);
+	     setDefaultLookAndFeelDecorated(true);
+             setLocationRelativeTo(null);
+             setResizable(false);
+	     setVisible(true);		
 		
 	}
 	
@@ -135,9 +135,9 @@ import javax.swing.JTextField;
 	JPanel file_info_panel;
 	//JLabel space_label;
 	JPanel newPanel;
-    JPanel config_Panel; 
+        JPanel config_Panel; 
 	static JTextField host_field;
-    static JTextField port_field;
+        static JTextField port_field;
 	JTextField text_username;
 	JPasswordField text_password;
    	
