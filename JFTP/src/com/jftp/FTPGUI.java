@@ -32,7 +32,7 @@ public class FTPGUI extends JFrame {
 	 static OutputStream out;
 	 static InetAddress inetAddress;
 	 static Socket socket;
-     static  DataInputStream clientData ;
+         static  DataInputStream clientData ;
 	 static ServerSocket server_socket = null;	 
 	 static String fileName;
 	 static long size , estimatedTime = 0;
@@ -344,7 +344,7 @@ public class FTPGUI extends JFrame {
 		   newPanel.add(file_recieved_val);
 		   newPanel.add(host_name);
 		   newPanel.add(host_name_val);
-	       newPanel.add(file_name_labl);
+	           newPanel.add(file_name_labl);
 		   newPanel.add(file_name_val);
 		   newPanel.add(file_size);
 		   newPanel.add(file_size_val);
@@ -378,13 +378,13 @@ public class FTPGUI extends JFrame {
 	 
 	 // defining class fields
 	 
-	    private JLabel label_status;
+	        private JLabel label_status;
 		private JLabel label_clientConn;
 		private JLabel label_fileRecieved;
 		private JLabel label_waiting_time;
 		static JLabel label_running;
 		private JLabel label_time_val;	
-	    static JLabel client_conn_val , file_recieved_val;
+	        static JLabel client_conn_val , file_recieved_val;
 		static JLabel host_name ,host_name_val;
 		static JLabel file_name_labl ,file_name_val;
 		static JLabel file_size ,file_size_val;
