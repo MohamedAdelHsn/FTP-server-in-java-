@@ -20,7 +20,7 @@ public class ClientHandler {
 	 DataInputStream dis ;
 	 OutputStream os;
 	 DataOutputStream dos ;
-     FileInputStream fis;
+         FileInputStream fis;
 	
 	public ClientHandler() 
 	{
@@ -72,9 +72,9 @@ public class ClientHandler {
 			    // store data using byte array  
 			    byte[] mybytearray = new byte[(int) myFile.length()];
 			         
-				fis = new FileInputStream(myFile);
+			    fis = new FileInputStream(myFile);
 			
-				bis = new BufferedInputStream(fis);  
+			    bis = new BufferedInputStream(fis);  
 			     
 				// represent primitive data type that carries file name , file size and etc....
 			    dis = new DataInputStream(bis);     
