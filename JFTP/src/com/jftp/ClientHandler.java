@@ -77,7 +77,7 @@ public class ClientHandler {
 			
 			    bis = new BufferedInputStream(fis);  
 			     
-				// represent primitive data type that carries file name , file size and etc....
+			    // represent primitive data type that carries file name , file size and etc....
 			    dis = new DataInputStream(bis);     
 			  
 			    // read data to byte array
@@ -86,7 +86,7 @@ public class ClientHandler {
 			    // connect to stream socket to send data        
 			    os = socket.getOutputStream();  
 			           
-			   //Sending file name and file size to the server  
+			    //Sending file name and file size to the server  
 			    dos = new DataOutputStream(os);     
 			    dos.writeUTF(myFile.getName());
 			    dos.writeLong(mybytearray.length);     
