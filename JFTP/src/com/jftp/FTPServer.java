@@ -13,7 +13,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.ServerSocket;
-
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -144,11 +143,12 @@ public class FTPServer extends FTPGUI{
 					while(true) {
 					 	
 						try {
-							  // waiting to accept any socket 
-					         socket = server_socket.accept();
+							
+					         // waiting to accept any socket 
+					             socket = server_socket.accept();
 
-							 // if new client connected increase counter by 1
-							 number_of_clients++;	
+						     // if new client connected increase counter by 1
+						     number_of_clients++;	
 							 
 							 // getting ip address of client  [1]***
 						     host_name_val.setText(socket.getInetAddress().getLocalHost().getHostName()+" Connected");
@@ -162,11 +162,11 @@ public class FTPServer extends FTPGUI{
 						     clientData  = new DataInputStream(in); 
 						             
 						      // write file name , size to server 				            	
-							 fileName = clientData.readUTF();
-							 size = clientData.readLong();
+						     fileName = clientData.readUTF();
+						     size = clientData.readLong();
 
 			    
-					         out = new FileOutputStream(path+fileName);
+					             out = new FileOutputStream(path+fileName);
 						             
 						             
 						     file_name_val.setText(fileName);
@@ -210,15 +210,15 @@ public class FTPServer extends FTPGUI{
 						       WriteDataToServer(obj_data);
 						       
 						         // closing socket					        
-						         in.close();
-					             clientData.close();
-					             out.close();
-					             socket.close();
+						      in.close();
+					              clientData.close();
+					              out.close();
+					              socket.close();
 					            				             
 						             
 							    }catch (IOException e) {
 										
-							       host_name_val.setText("NO Host Name connected !");
+							           host_name_val.setText("NO Host Name connected !");
 								   client_conn_val.setText("No Client Connected");
 								   file_name_val.setText("No File !");
 								   file_size_val.setText("null");
@@ -235,7 +235,7 @@ public class FTPServer extends FTPGUI{
 			};
 			
 		    th = new Thread(runnable);
-			th.start();
+		    th.start();
 	}
 	
 	
@@ -275,7 +275,7 @@ public class FTPServer extends FTPGUI{
 			
 		String line;
 		DefaultTableModel model =  (DefaultTableModel)jt.getModel();
-	    String[] delimeter_line; 
+	        String[] delimeter_line; 
 		
 		while((line = buffer_reader.readLine()) != null) 
 		{
