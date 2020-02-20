@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 
 public class ClientHandler {
 
+	
 	 Socket socket;
 	 File myFile;
 	 BufferedInputStream bis ;
@@ -37,7 +38,7 @@ public class ClientHandler {
 			
 		   }catch(java.net.ConnectException ex)
 		   {
-				JOptionPane.showMessageDialog(null , "\r\n" + 
+			   JOptionPane.showMessageDialog(null , "\r\n" + 
 						"run the server first then try again !", "Server Not responding !" ,2);
 		    			    	
 		   }catch( java.lang.NumberFormatException numEx)
@@ -47,12 +48,12 @@ public class ClientHandler {
 			  
 		  }catch(java.net.UnknownHostException unknownEx)
 		  {
-			  JOptionPane.showMessageDialog(null , "please enter real host", "\r\n" + 
+			   JOptionPane.showMessageDialog(null , "please enter real host", "\r\n" + 
 					  "server Exception" ,2);
 
 		  }catch( java.lang.IllegalArgumentException portEx) {
 			  
-			  JOptionPane.showMessageDialog(null , "please enter real port", "\r\n" + 
+			   JOptionPane.showMessageDialog(null , "please enter real port", "\r\n" + 
 						"server Exception" ,2);
 			  
 		 } catch (IOException e) {
