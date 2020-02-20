@@ -144,7 +144,7 @@ public class FTPServer extends FTPGUI{
 					 	
 						try {
 							
-					         // waiting to accept any socket 
+					              // waiting to accept any socket 
 					             socket = server_socket.accept();
 
 						     // if new client connected increase counter by 1
@@ -154,26 +154,26 @@ public class FTPServer extends FTPGUI{
 						     host_name_val.setText(socket.getInetAddress().getLocalHost().getHostName()+" Connected");
 						     client_conn_val.setText(socket.getInetAddress().getLocalHost().getHostAddress());						
 							
-						     no_clients_val.setText(""+number_of_clients);
+						      no_clients_val.setText(""+number_of_clients);
 							 // connect to stream socket to read data        
-						     in = socket.getInputStream();				        
+						      in = socket.getInputStream();				        
 						             
 						      // represent file name , size from clientSocket 
-						     clientData  = new DataInputStream(in); 
+						      clientData  = new DataInputStream(in); 
 						             
 						      // write file name , size to server 				            	
-						     fileName = clientData.readUTF();
-						     size = clientData.readLong();
+						      fileName = clientData.readUTF();
+						      size = clientData.readLong();
 
 			    
-					             out = new FileOutputStream(path+fileName);
+					              out = new FileOutputStream(path+fileName);
 						             
 						             
-						     file_name_val.setText(fileName);
-						     file_size_val.setText(""+Math.ceil((size/1024.0))+" KB");
+						      file_name_val.setText(fileName);
+						      file_size_val.setText(""+Math.ceil((size/1024.0))+" KB");
 						             
 						       // getting data from client using byte array 
-						     byte[] buffer = new byte[16*1024];  
+						      byte[] buffer = new byte[16*1024];  
 							    
 						     
 						      // measure time of loading file. 
